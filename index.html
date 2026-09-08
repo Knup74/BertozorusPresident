@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bertozorus président 2027</title>
+<meta name="description" content="Bertozorus, candidat à l'élection présidentielle 2027. Affiche non officielle.">
+<meta name="color-scheme" content="dark">
+
+<meta property="og:title" content="Bertozorus président 2027">
+<meta property="og:description" content="Le seul candidat qui a survécu à l'astéroïde.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --encre:#14213F;
+    --encre-fonce:#0E1830;
+    --papier:#EFE9DA;
+    --rouge:#E12729;
+    --bleu-clair:#4A6BC4;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+
+  html,body{height:100%}
+
+  body{
+    background:
+      radial-gradient(120% 90% at 50% 0%, #1B2C56 0%, var(--encre) 45%, var(--encre-fonce) 100%);
+    color:var(--papier);
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    display:grid;
+    place-items:center;
+    padding:clamp(1.5rem,5vw,4rem);
+  }
+
+  /* léger grain d'impression sérigraphique */
+  body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:.28;
+    background-image:radial-gradient(rgba(255,255,255,.35) .5px, transparent .5px);
+    background-size:3px 3px;
+    mix-blend-mode:overlay;
+  }
+
+  .affiche{
+    width:min(70ch,100%);
+    text-align:center;
+    position:relative;
+    z-index:1;
+  }
+
+  .cocarde{
+    width:clamp(48px,7vw,68px);
+    height:auto;
+    display:block;
+    margin:0 auto clamp(1.5rem,4vw,2.5rem);
+  }
+
+  .kicker{
+    font-size:clamp(.72rem,1.6vw,.9rem);
+    letter-spacing:.14em;
+    color:var(--bleu-clair);
+    margin-bottom:clamp(.8rem,2vw,1.2rem);
+  }
+
+  h1{
+    font-family:Anton,"Arial Narrow",Impact,sans-serif;
+    font-weight:400;
+    line-height:.82;
+    text-transform:none;
+  }
+
+  .nom{
+    display:block;
+    font-size:clamp(3.2rem,15.5vw,10.5rem);
+    letter-spacing:-.015em;
+  }
+
+  .fonction{
+    display:block;
+    font-size:clamp(1.6rem,7vw,4.6rem);
+    color:var(--rouge);
+    letter-spacing:.02em;
+    margin-top:.12em;
+  }
+
+  .annee{
+    display:block;
+    font-size:clamp(4rem,20vw,14rem);
+    letter-spacing:.02em;
+    margin-top:.06em;
+    color:transparent;
+    -webkit-text-stroke:2px var(--papier);
+    text-stroke:2px var(--papier);
+  }
+
+  .slogan{
+    margin:clamp(1.8rem,5vw,2.8rem) auto 0;
+    max-width:34ch;
+    font-size:clamp(1rem,2.4vw,1.35rem);
+    line-height:1.5;
+    color:#D8D2C2;
+  }
+
+  .regle{
+    width:64px;
+    height:3px;
+    background:var(--rouge);
+    border:0;
+    margin:clamp(2rem,5vw,3rem) auto clamp(1rem,2.5vw,1.4rem);
+  }
+
+  footer{
+    font-size:.78rem;
+    line-height:1.6;
+    color:#8C96B4;
+  }
+
+  /* une seule apparition, à l'ouverture */
+  .affiche > *{
+    opacity:0;
+    animation:apparait .7s cubic-bezier(.22,.61,.36,1) forwards;
+  }
+  .cocarde{animation-delay:.05s}
+  .kicker{animation-delay:.15s}
+  h1{animation-delay:.25s}
+  .slogan{animation-delay:.45s}
+  .regle,footer{animation-delay:.6s}
+
+  @keyframes apparait{
+    from{opacity:0;transform:translateY(10px)}
+    to{opacity:1;transform:none}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    .affiche > *{opacity:1;animation:none}
+  }
+</style>
+</head>
+<body>
+
+  <main class="affiche">
+
+    <svg class="cocarde" viewBox="0 0 100 100" role="img" aria-label="Cocarde tricolore">
+      <circle cx="50" cy="50" r="48" fill="#2B4A9B"/>
+      <circle cx="50" cy="50" r="32" fill="#EFE9DA"/>
+      <circle cx="50" cy="50" r="16" fill="#E12729"/>
+    </svg>
+
+    <p class="kicker">Élection présidentielle française</p>
+
+    <h1>
+      <span class="nom">Bertozorus</span>
+      <span class="fonction">président</span>
+      <span class="annee">2027</span>
+    </h1>
+
+    <p class="slogan">Le seul candidat qui a survécu à l'astéroïde.</p>
+
+    <hr class="regle">
+
+    <footer>
+      Affiche non officielle. Ne pas jeter sur la voie publique.
+    </footer>
+
+  </main>
+
+</body>
+</html>
